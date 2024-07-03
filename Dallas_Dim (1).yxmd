@@ -1,0 +1,812 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="18" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File FileFormat="23" RecordLimit="">aka:ZURI\SQLEXPRESS|||select Dallas_FI.* 
+from Dallas_FI</File>
+          <FormatSpecificOptions>
+            <SingleRowFetch>False</SingleRowFetch>
+            <ReadCentroids>False</ReadCentroids>
+            <TableStyle>Quoted</TableStyle>
+            <CacheData>False</CacheData>
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <NoProgress>True</NoProgress>
+            <PostSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=select Dallas_FI.* 
+from Da...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="RecordID" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int32" />
+            <Field name="Restaurant Name" size="65" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Inspection Type" size="9" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Inspection Date" size="10" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Inspection Score" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Street Number" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int32" />
+            <Field name="Street Name" size="25" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Street Direction" size="1" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Street Type" size="4" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Street Unit" size="5" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Street Address" size="36" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Zip Code" size="10" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Violation Description - 1" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 1" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 1" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 1" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 2" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 2" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 2" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 2" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 3" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 3" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 3" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 3" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 4" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 4" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 4" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 4" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 5" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 5" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 5" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 5" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 6" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 6" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 6" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 6" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 7" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 7" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 7" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 7" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 8" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 8" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 8" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 8" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 9" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 9" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 9" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 9" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 10" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 10" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 10" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 10" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 11" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 11" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 11" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 11" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 12" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 12" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 12" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 12" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 13" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 13" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 13" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 13" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 14" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 14" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 14" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 14" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 15" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 15" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 15" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 15" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 16" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 16" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 16" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 16" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 17" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 17" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 17" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 17" size="212" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 18" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 18" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 18" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 18" size="230" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="Violation Description - 19" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 19" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 19" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 19" size="245" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 20" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 20" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 20" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation  Memo - 20" size="247" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 21" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 21" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 21" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 21" size="211" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 22" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 22" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 22" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 22" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 23" size="100" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 23" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 23" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 23" size="103" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 24" size="59" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 24" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 24" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 24" size="186" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Description - 25" size="50" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Points - 25" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Int16" />
+            <Field name="Violation Detail - 25" size="254" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Violation Memo - 25" size="171" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="Inspection Month" size="8" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Inspection Year" size="6" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="String" />
+            <Field name="Lat Long Location" size="59" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_String" />
+            <Field name="DI_CreateDate" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Date" />
+            <Field name="DI_WorkflowDallasDP" size="16777216" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="V_WString" />
+            <Field name="DateTime_Out" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Date" />
+            <Field name="DateTime_Out2" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Date" />
+            <Field name="DateTime_Out3" source="File: aka:ZURI\SQLEXPRESS|||select Dallas_FI.* &#xA;from Dallas_FI" type="Date" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="137" y="5" width="683" height="273" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 9</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="1">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="402" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="10" type="Date" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_CreateWorkFlowDallas" size="1073741823" type="V_WString" />
+                <FormulaField expression="[Engine.WorkflowDirectory]" field="DI_WorkflowDirectory" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DI_CreateDate = DateTimeNow()
+DI_CreateWorkFlowDallas = [Engine.WorkflowFileName...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="2">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="546" y="102" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>RestaurantSK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="3">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="690" y="126" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:ZURI\SQLEXPRESS|||Dim_Dallas_Restaurant</File>
+              <Passwords />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Overwrite</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=Dim_Dallas_Restaurant</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="4">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="282" y="101" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Restaurant Name" />
+                <Field field="Street Number" />
+                <Field field="Street Name" />
+                <Field field="Street Direction" />
+                <Field field="Street Type" />
+                <Field field="Street Unit" />
+                <Field field="Street Address" />
+                <Field field="Zip Code" />
+                <Field field="DI_CreateDate" />
+                <Field field="DI_WorkflowDallasDP" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="6">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="690" y="54" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\jfird\AppData\Local\Temp\Engine_3164_b353037ae91527418560be3e2ccbd587_\Engine_3164_23717fa355db2b468b06c2089f93337d~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="8">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="162" y="113" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Restaurant Name" selected="True" />
+                <SelectField field="Street Number" selected="True" />
+                <SelectField field="Street Name" selected="True" />
+                <SelectField field="Street Direction" selected="True" />
+                <SelectField field="Street Type" selected="True" />
+                <SelectField field="Street Unit" selected="True" />
+                <SelectField field="Street Address" selected="True" />
+                <SelectField field="Zip Code" selected="True" />
+                <SelectField field="DI_CreateDate" selected="True" />
+                <SelectField field="DI_WorkflowDallasDP" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="125" y="293" width="707" height="273" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 17</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="True" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="10">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="414" y="389" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="10" type="Date" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_CreateWorkFlowDallas" size="1073741823" type="V_WString" />
+                <FormulaField expression="[Engine.WorkflowDirectory]" field="DI_WorkflowDirectory" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DI_CreateDate = DateTimeNow()
+DI_CreateWorkFlowDallas = [Engine.WorkflowFileName...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="11">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="558" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>GeoSK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="12">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="702" y="414" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:ZURI\SQLEXPRESS|||Dim_Dallas_Geo</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Overwrite</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=Dim_Dallas_Geo</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="13">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="294" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Street Number" />
+                <Field field="Street Name" />
+                <Field field="Street Direction" />
+                <Field field="Street Type" />
+                <Field field="Street Unit" />
+                <Field field="Street Address" />
+                <Field field="Zip Code" />
+                <Field field="DI_CreateDate" />
+                <Field field="DI_WorkflowDallasDP" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="15">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="702" y="342" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\jfird\AppData\Local\Temp\Engine_39648_4484b941b832db4485fb7c4938e3f512_\Engine_39648_ed2dd9de492c65418daadb8dfb412c9e~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="16">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="150" y="390" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Street Number" selected="True" />
+                <SelectField field="Street Name" selected="True" />
+                <SelectField field="Street Direction" selected="True" />
+                <SelectField field="Street Type" selected="True" />
+                <SelectField field="Street Unit" selected="True" />
+                <SelectField field="Street Address" selected="True" />
+                <SelectField field="Zip Code" selected="True" />
+                <SelectField field="DI_CreateDate" selected="True" />
+                <SelectField field="DI_WorkflowDallasDP" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="125" y="521" width="707" height="273" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Container 24</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25" />
+          <Disabled value="False" />
+          <Folded value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="18">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+            <Position x="414" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FormulaFields>
+                <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="10" type="Date" />
+                <FormulaField expression="[Engine.WorkflowFileName]" field="DI_CreateWorkFlowDallas" size="1073741823" type="V_WString" />
+                <FormulaField expression="[Engine.WorkflowDirectory]" field="DI_WorkflowDirectory" size="1073741823" type="V_WString" />
+              </FormulaFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>DI_CreateDate = DateTimeNow()
+DI_CreateWorkFlowDallas = [Engine.WorkflowFileName...</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+        </Node>
+        <Node ToolID="19">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+            <Position x="558" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <FieldName>InspectionTypeSK</FieldName>
+              <StartValue>1</StartValue>
+              <FieldType>Int32</FieldType>
+              <FieldSize>6</FieldSize>
+              <Position>0</Position>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+        </Node>
+        <Node ToolID="20">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+            <Position x="702" y="642" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <File MaxRecords="" FileFormat="23">aka:ZURI\SQLEXPRESS|||Dim_Dallas_InspectionType</File>
+              <Passwords />
+              <CachedCosmeticName />
+              <Disable>False</Disable>
+              <FormatSpecificOptions>
+                <TransactionMessages>False</TransactionMessages>
+                <Geometry>True</Geometry>
+                <Projection />
+                <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+                <SpatialObjSize>8000</SpatialObjSize>
+                <OutputOption>Overwrite</OutputOption>
+                <PostSQL />
+                <TransactionSize>10000</TransactionSize>
+                <TableStyle>Quoted</TableStyle>
+                <PreSQL />
+              </FormatSpecificOptions>
+              <MultiFile value="False" />
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=Dim_Dallas_InspectionType</DefaultAnnotationText>
+              <Left value="False" />
+            </Annotation>
+            <Dependencies>
+              <Implicit />
+            </Dependencies>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+        </Node>
+        <Node ToolID="21">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+            <Position x="294" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <UniqueFields>
+                <Field field="Inspection Type" />
+                <Field field="DI_CreateDate" />
+                <Field field="DI_WorkflowDallasDP" />
+              </UniqueFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+        </Node>
+        <Node ToolID="22">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+            <Position x="702" y="570" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <TempFile>C:\Users\jfird\AppData\Local\Temp\Engine_42008_4aa4fd9682dceb4ebded581e266945c8_\Engine_42008_ba20758c4788e044bcf9c84ad00a76c7~.yxdb</TempFile>
+              <TempFileDataProfiling />
+              <Layout>
+                <ViewMode>Single</ViewMode>
+                <ViewSize value="100" />
+                <View1>
+                  <DefaultTab>Profile</DefaultTab>
+                  <Hints>
+                    <Table />
+                  </Hints>
+                </View1>
+                <View2 />
+              </Layout>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+        </Node>
+        <Node ToolID="23">
+          <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+            <Position x="150" y="618" />
+          </GuiSettings>
+          <Properties>
+            <Configuration>
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Inspection Type" selected="True" />
+                <SelectField field="DI_CreateDate" selected="True" />
+                <SelectField field="DI_WorkflowDallasDP" selected="True" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+          <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+        </Node>
+      </ChildNodes>
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Unique" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Unique" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="22" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Unique" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="23" Connection="Output" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dallas_Dim</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="8d927ac8-c14c-4c2e-8155-36293e07246a" />
+      <Telemetry>
+        <PreviousWorkflowId value="67a533c5-44ec-4efc-b53c-2731a8151fc9" />
+        <OriginWorkflowId value="67a533c5-44ec-4efc-b53c-2731a8151fc9" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

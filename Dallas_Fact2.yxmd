@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="426" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="10" type="Date" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_CreateWorkFlowDallas" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Engine.WorkflowDirectory]" field="DI_WorkflowDirectory" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="InspectionDate" size="10" type="Date" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_CreateDate = DateTimeNow()
+DI_CreateWorkFlowDallas = [Engine.WorkflowFileName...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="570" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>InspectionViolationsSK</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="714" y="102" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">aka:ZURI\SQLEXPRESS|||FCT_Dallas_FoodInspection_Violations</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <TransactionMessages>False</TransactionMessages>
+            <Geometry>True</Geometry>
+            <Projection />
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <OutputOption>Overwrite</OutputOption>
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=FCT_Dallas_FoodInspection_Vi...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="306" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="Inspection Date" />
+            <Field field="Inspection Month" />
+            <Field field="Inspection Year" />
+            <Field field="Lat Long Location" />
+            <Field field="DI_CreateDate" />
+            <Field field="DI_WorkflowDallasDP" />
+            <Field field="Inspection Score" />
+            <Field field="InspectionSK" />
+            <Field field="DI_CreateWorkFlowDallas" />
+            <Field field="DI_WorkflowDirectory" />
+            <Field field="Violation Description - 1" />
+            <Field field="Violation Points - 1" />
+            <Field field="Violation Detail - 1" />
+            <Field field="Violation Memo - 1" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="714" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\jfird\AppData\Local\Temp\Engine_44804_e2ef16815869464e8a2948272a7041b0_\Engine_44804_75d7b734e130d7408a4c7beaf798994b~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="90" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File FileFormat="23" RecordLimit="">aka:ZURI\SQLEXPRESS|||select Dallas_FI.[Inspection Date],
+	Dallas_FI.[Inspection Month],
+	Dallas_FI.[Inspection Year],
+	Dallas_FI.[Lat Long Location],
+	Dallas_FI.DI_CreateDate,
+	Dallas_FI.DI_WorkflowDallasDP,
+	Dallas_FI.[Inspection Score],
+	FCT_Dallas_FootInspection.InspectionSK,
+	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,
+	FCT_Dallas_FootInspection.DI_WorkflowDirectory,
+	Dallas_FI.[Violation Description - 1],
+	Dallas_FI.[Violation Points - 1],
+	Dallas_FI.[Violation Detail - 1],
+	Dallas_FI.[Violation Memo - 1] 
+from Dallas_FI, FCT_Dallas_FootInspection</File>
+          <FormatSpecificOptions>
+            <SingleRowFetch>False</SingleRowFetch>
+            <ReadCentroids>False</ReadCentroids>
+            <TableStyle>Quoted</TableStyle>
+            <CacheData>False</CacheData>
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <NoProgress>True</NoProgress>
+            <PostSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=select Dallas_FI.[Inspection...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Inspection Date" size="10" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="String" />
+            <Field name="Inspection Month" size="8" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="String" />
+            <Field name="Inspection Year" size="6" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="String" />
+            <Field name="Lat Long Location" size="59" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="V_String" />
+            <Field name="DI_CreateDate" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="Date" />
+            <Field name="DI_WorkflowDallasDP" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="V_WString" />
+            <Field name="Inspection Score" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="Int16" />
+            <Field name="InspectionSK" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="Int32" />
+            <Field name="DI_CreateWorkFlowDallas" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="V_WString" />
+            <Field name="DI_WorkflowDirectory" size="16777216" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="V_WString" />
+            <Field name="Violation Description - 1" size="100" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="V_String" />
+            <Field name="Violation Points - 1" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="Int16" />
+            <Field name="Violation Detail - 1" size="254" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="V_String" />
+            <Field name="Violation Memo - 1" size="254" source="File: odbc:DRIVER={ODBC Driver 17 for SQL Server};DATABASE=Dallas;SERVER=ZURI\SQLEXPRESS;Trusted_Connection=yes|||select Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	FCT_Dallas_FootInspection.InspectionSK,&#xA;	FCT_Dallas_FootInspection.DI_CreateWorkFlowDallas,&#xA;	FCT_Dallas_FootInspection.DI_WorkflowDirectory,&#xA;	Dallas_FI.[Violation Description - 1],&#xA;	Dallas_FI.[Violation Points - 1],&#xA;	Dallas_FI.[Violation Detail - 1],&#xA;	Dallas_FI.[Violation Memo - 1] &#xA;from Dallas_FI, FCT_Dallas_FootInspection" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="198" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="Inspection Date" selected="True" />
+            <SelectField field="Inspection Month" selected="True" />
+            <SelectField field="Inspection Year" selected="True" />
+            <SelectField field="Lat Long Location" selected="True" />
+            <SelectField field="DI_CreateDate" selected="True" />
+            <SelectField field="DI_WorkflowDallasDP" selected="True" />
+            <SelectField field="Inspection Score" selected="True" />
+            <SelectField field="InspectionSK" selected="True" />
+            <SelectField field="DI_CreateWorkFlowDallas" selected="True" />
+            <SelectField field="DI_WorkflowDirectory" selected="True" />
+            <SelectField field="Violation Description - 1" selected="True" />
+            <SelectField field="Violation Points - 1" selected="True" />
+            <SelectField field="Violation Detail - 1" selected="True" />
+            <SelectField field="Violation Memo - 1" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Unique" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dallas_Fact2</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="1b9aa099-6499-431c-b2bc-4a166c83f5c2" />
+      <Telemetry>
+        <PreviousWorkflowId value="44b7c276-1eda-4e7c-92ba-e20408b5f8a6" />
+        <OriginWorkflowId value="44b7c276-1eda-4e7c-92ba-e20408b5f8a6" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

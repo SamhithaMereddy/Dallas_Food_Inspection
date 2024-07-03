@@ -1,0 +1,295 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2022.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="366" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="DI_CreateDate" size="10" type="Date" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_CreateWorkFlowDallas" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Engine.WorkflowDirectory]" field="DI_WorkflowDirectory" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="InspectionDate" size="10" type="Date" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_CreateDate = DateTimeNow()
+DI_CreateWorkFlowDallas = [Engine.WorkflowFileName...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="510" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>InspectionSK</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="654" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">aka:ZURI\SQLEXPRESS|||FCT_Dallas_FootInspection</File>
+          <Passwords />
+          <Disable>False</Disable>
+          <FormatSpecificOptions>
+            <TransactionMessages>False</TransactionMessages>
+            <Geometry>True</Geometry>
+            <Projection />
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <OutputOption>Overwrite</OutputOption>
+            <PostSQL />
+            <TransactionSize>10000</TransactionSize>
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=FCT_Dallas_FootInspection</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="246" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="GeoSK" />
+            <Field field="Inspection Date" />
+            <Field field="Inspection Month" />
+            <Field field="Inspection Year" />
+            <Field field="Lat Long Location" />
+            <Field field="DI_CreateDate" />
+            <Field field="DI_WorkflowDallasDP" />
+            <Field field="Inspection Score" />
+            <Field field="RestaurantSK" />
+            <Field field="InspectionTypeSK" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="654" y="42" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\jfird\AppData\Local\Temp\Engine_9104_bfc70518a02bf04a9c6f540630a262b5_\Engine_9104_746270fdde9cee4d901c381a105fee9c~.yxdb</TempFile>
+          <TempFileDataProfiling />
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Profile</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="30" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <File FileFormat="23" RecordLimit="">aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,
+	Dallas_FI.[Inspection Date],
+	Dallas_FI.[Inspection Month],
+	Dallas_FI.[Inspection Year],
+	Dallas_FI.[Lat Long Location],
+	Dallas_FI.DI_CreateDate,
+	Dallas_FI.DI_WorkflowDallasDP,
+	Dallas_FI.[Inspection Score],
+	Dim_Dallas_Restaurant.RestaurantSK,
+	Dim_Dallas_InspectionType.InspectionTypeSK 
+from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant</File>
+          <FormatSpecificOptions>
+            <SingleRowFetch>False</SingleRowFetch>
+            <ReadCentroids>False</ReadCentroids>
+            <TableStyle>Quoted</TableStyle>
+            <CacheData>False</CacheData>
+            <SessionReadOnly>True</SessionReadOnly>
+            <ReadUncommitted>False</ReadUncommitted>
+            <NoProgress>True</NoProgress>
+            <PostSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <PreSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:ZURI\SQLEXPRESS
+Query=select Dim_Dallas_Geo.GeoSK,...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="GeoSK" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="Int32" />
+            <Field name="Inspection Date" size="10" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="String" />
+            <Field name="Inspection Month" size="8" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="String" />
+            <Field name="Inspection Year" size="6" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="String" />
+            <Field name="Lat Long Location" size="59" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="V_String" />
+            <Field name="DI_CreateDate" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="Date" />
+            <Field name="DI_WorkflowDallasDP" size="16777216" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="V_WString" />
+            <Field name="Inspection Score" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="Int16" />
+            <Field name="RestaurantSK" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="Int32" />
+            <Field name="InspectionTypeSK" source="File: aka:ZURI\SQLEXPRESS|||select Dim_Dallas_Geo.GeoSK,&#xA;	Dallas_FI.[Inspection Date],&#xA;	Dallas_FI.[Inspection Month],&#xA;	Dallas_FI.[Inspection Year],&#xA;	Dallas_FI.[Lat Long Location],&#xA;	Dallas_FI.DI_CreateDate,&#xA;	Dallas_FI.DI_WorkflowDallasDP,&#xA;	Dallas_FI.[Inspection Score],&#xA;	Dim_Dallas_Restaurant.RestaurantSK,&#xA;	Dim_Dallas_InspectionType.InspectionTypeSK &#xA;from Dallas_FI, Dim_Dallas_Geo, Dim_Dallas_InspectionType, Dim_Dallas_Restaurant" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="GeoSK" selected="True" />
+            <SelectField field="Inspection Date" selected="True" />
+            <SelectField field="Inspection Month" selected="True" />
+            <SelectField field="Inspection Year" selected="True" />
+            <SelectField field="Lat Long Location" selected="True" />
+            <SelectField field="DI_CreateDate" selected="True" />
+            <SelectField field="DI_WorkflowDallasDP" selected="True" />
+            <SelectField field="Inspection Score" selected="True" />
+            <SelectField field="RestaurantSK" selected="True" />
+            <SelectField field="InspectionTypeSK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Unique" />
+      <Destination ToolID="1" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <RunWithE2 value="True" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dallas_FCT</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="91171be9-6d30-47ee-838e-9ffd2db9847b" />
+      <Telemetry>
+        <PreviousWorkflowId value="d7040308-7605-4a49-97a9-61802b3b2f2f" />
+        <OriginWorkflowId value="d7040308-7605-4a49-97a9-61802b3b2f2f" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
